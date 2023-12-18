@@ -2,7 +2,7 @@ from flask import Flask, redirect, send_from_directory
 from flask_socketio import SocketIO
 
 app = Flask(__name__)
-socketio = SocketIO(app)
+socketio = SocketIO(app, cors_allowed_origins='*')
 
 
 @app.get('/')
@@ -16,6 +16,7 @@ def home():
 @socketio.on('message')
 def handle_message(message):
     print('received message: ' + message)
+    socketio.send(message)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    socketio.run(app, debug=True)
