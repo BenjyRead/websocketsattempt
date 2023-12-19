@@ -4,7 +4,9 @@ socket = io('http://localhost:5000')
 socket.on('connect', () => {console.log("WebSocket connection state:", socket.readyState)})
 
 socket.on("message", (text) => {
-    console.log(text)
+    textbox = document.getElementById("texts")
+    textbox.innerText += text + "\n"
+
 })
 
 sendbutton = document.getElementById("send")
