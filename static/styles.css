@@ -1,27 +1,14 @@
 .hor-center{
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-right: auto;
     margin-left: auto;
 }
 
-.m-t-80{
-    margin-top: 80vh;
-}
-
-.m-b-10px{
-    margin-bottom: 10px;
-}
-
-.p-b-80{
-    padding-bottom: 80vh;
-}
-
-.mw-60{
-    max-width: 60%;
-}
-
-.border-div{
+.textbox{
     border: 1px solid black;
+    max-width: 60%;
+    max-height: 80vh;
+    height: 80vh;
+    margin-bottom: 10px;
 }
